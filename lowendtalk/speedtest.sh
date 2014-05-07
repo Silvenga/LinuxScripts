@@ -8,15 +8,17 @@ function download_benchmark() {
 	echo "$1: $DOWNLOAD_SPEED ($2)"
 }
 
+echo
 echo               "####################################"
 echo               "#        Bandwidth Benchmark       #"
 echo               "####################################"
-
+echo
 echo               '------------------------------------'
 echo               '            Global (CDN)            '
 echo               '------------------------------------'
 download_benchmark 'Cachefly' 'http://cachefly.cachefly.net/100mb.test'
 
+echo
 echo               '------------------------------------'
 echo               '          Northern America          '
 echo               '------------------------------------'
@@ -29,6 +31,7 @@ download_benchmark 'Softlayer, San Jose, CA, USA' 'http://speedtest.sjc01.softla
 download_benchmark 'Softlayer, Washington, DC, USA' 'http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
 download_benchmark 'Leaseweb, Manassas, VA, USA' 'http://mirror.us.leaseweb.net/speedtest/100mb.bin'
 
+echo
 echo               '------------------------------------'
 echo               '      Western & Southern Europe     '
 echo               '------------------------------------'
@@ -43,6 +46,7 @@ download_benchmark 'EDIS (Colt), Madrid, ES' 'http://es.edis.at/100mb.bin'
 download_benchmark 'GinerNet (iDataGreen), Barcelona, ES' 'http://bcn.ginernet.com/100MB.test'
 download_benchmark 'OTENet, Greece' 'http://speedtest.ftp.otenet.gr/files/test100Mb.db'
 
+echo
 echo               '------------------------------------'
 echo               '      Central & Eastern Europe      '
 echo               '------------------------------------'
@@ -51,12 +55,14 @@ download_benchmark 'EDIS (AdNet), Bucharest, RO' 'http://ro.edis.at/100MB.test'
 download_benchmark 'EDIS (Anders), Moscow, RU' 'http://ru.edis.at/100MB.test'
 #download_benchmark 'Voxility, Bucharest, RO (10GB)' 'http://buc.voxility.net/10GB.bin'
 
+echo
 echo               '------------------------------------'
 echo               '              Oceania               '
 echo               '------------------------------------'                      
 download_benchmark 'iiNet, Perth, WA, AUS' 'http://ftp.iinet.net.au/test100MB.dat'
 #download_benchmark 'MammothVPS, Sydney, AUS' 'http://www.mammothvpscustomer.com/test100MB.dat'
 
+echo
 echo               '------------------------------------'
 echo               '                Asia                '
 echo               '------------------------------------'               
@@ -64,8 +70,8 @@ echo               '------------------------------------'
 download_benchmark 'Linode, Tokyo, JP' 'http://speedtest.tokyo.linode.com/100MB-tokyo.bin'
 download_benchmark 'Softlayer, Singapore' 'http://speedtest.sng01.softlayer.com/downloads/test100.zip'
 download_benchmark 'Digital Ocean, Singapore' 'http://speedtest-sgp1.digitalocean.com/100mb.test'
-echo -e '\n'
 
+echo
 echo               "####################################"
 echo               "#        speedtest.net CLI         #"
 echo               "####################################"
@@ -78,4 +84,5 @@ echo "Traceroute (cachefly.cachefly.net): ``traceroute cachefly.cachefly.net 2>&
 
 echo "Running ping benchmark..."
 echo "Pings (cachefly.cachefly.net): ``ping -c 10 cachefly.cachefly.net 2>&1``"
+
 
