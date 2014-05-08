@@ -1,9 +1,25 @@
 #!/bin/bash
 #
+#	server-speedtest - An utility to test network quality and speeds on a server
+#	https://github.com/iceTwy/server-speedtest
+#
+
 function download_benchmark() {
 	DOWNLOAD_SPEED=`wget -O /dev/null $2 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}'`
 	echo "$1: $DOWNLOAD_SPEED ($2)"
 }
+
+function do_traceroute() {
+	TRACEROUTE=`traceroute $1 2>&1`
+	echo "$TRACEROUTE"
+}
+
+function do_ping() {
+	PING=`ping -c 10 $1 2>&1`
+	echo "$PING"
+	echo
+}
+
 
 echo
 echo               "####################################"
@@ -76,7 +92,10 @@ wget --quiet --no-check-certificate https://raw.github.com/sivel/speedtest-cli/m
 python speedtest_cli.py
 rm speedtest_cli.py
 
-echo "Running traceroute..."
+echo               "####################################"
+echo               "#            Traceroute            #"
+echo               "####################################"
+
 echo "Traceroute (cachefly.cachefly.net): ``traceroute cachefly.cachefly.net 2>&1``"
 
 echo "Running ping benchmark..."
