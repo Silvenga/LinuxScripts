@@ -10,16 +10,18 @@ function download_benchmark() {
 }
 
 function do_traceroute() {
-	TRACEROUTE=`traceroute $1 2>&1`
+	TRACEROUTE=`traceroute $2 2>&1`
+	echo "Traceroute to $1..."
 	echo "$TRACEROUTE"
-}
-
-function do_ping() {
-	PING=`ping -c 10 $1 2>&1`
-	echo "$PING"
 	echo
 }
 
+function do_ping() {
+	echo "Pinging $1..."
+	PING=`ping -c 10 $2 2>&1`
+	echo "$PING"
+	echo
+}
 
 echo
 echo               "####################################"
@@ -95,10 +97,21 @@ rm speedtest_cli.py
 echo               "####################################"
 echo               "#            Traceroute            #"
 echo               "####################################"
+echo
+echo               '------------------------------------'
+echo               '            Global (CDN)            '
+echo               '------------------------------------'
+echo
+do_traceroute 'CacheFly' 'cachefly.cachefly.net'
 
-echo "Traceroute (cachefly.cachefly.net): ``traceroute cachefly.cachefly.net 2>&1``"
-
-echo "Running ping benchmark..."
-echo "Pings (cachefly.cachefly.net): ``ping -c 10 cachefly.cachefly.net 2>&1``"
-
+echo
+echo               "###################################"
+echo               "#               Ping              #"
+echo               "###################################"
+echo
+echo               '------------------------------------'
+echo               '            Global (CDN)            '
+echo               '------------------------------------'
+echo
+do_traceroute 'CacheFly' 'cachefly.cachefly.net'
 
