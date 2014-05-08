@@ -1,12 +1,11 @@
 server-speedtest
 ================
 
-A script to test the network speeds and quality on a server, written in Bash.
-
+A script to test network quality and speeds on a server, written in Bash.
 
 ### Features
 
-`server-speedtest` runs multiple tests to assess your network speeds and quality:
+`server-speedtest` runs multiple tests to assess your network performance:
 
 * Download speed: 100MB file downloads from looking glasses around the globe
 * speedtest.net: local upload and download speeds using a geographically close provider
@@ -39,4 +38,12 @@ However, the speedtest.net check is carried out using @sivel's [speedtest-cli](h
 
 Just run `server-speedtest` in the directory in which it is located:
 
-`$ ./server-speedtest`
+`$ ./server-speedtest
+
+### License
+
+Refer to `LICENSE.md`.
+
+### Credits
+
+`server-speedtest` was initially written by [aFriend](http://lowendtalk.com/profile/84974/aFriend) and [shared on LowEndTalk](http://lowendtalk.com/discussion/comment/561833/#Comment_561833).
