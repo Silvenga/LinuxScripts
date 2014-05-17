@@ -67,6 +67,7 @@ echo               '      Central & Eastern Europe      '
 echo               '------------------------------------'
 download_benchmark 'EDIS (PLIX), Warsaw, PL' 'http://pl.edis.at/100MB.test'
 download_benchmark 'EDIS (AdNet), Bucharest, RO' 'http://ro.edis.at/100MB.test'
+download_benchmark 'Hosthink (Radore), Istanbul, TR' 'http://hosthink.org/100mb.test'
 download_benchmark 'EDIS (Anders), Moscow, RU' 'http://ru.edis.at/100MB.test'
 #download_benchmark 'Voxility, Bucharest, RO (10GB)' 'http://buc.voxility.net/10GB.bin'
 
