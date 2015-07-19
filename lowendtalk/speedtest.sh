@@ -24,9 +24,9 @@ download_benchmark 'SmartDC, Rotterdam, NL     ' 'http://mirror.i3d.net/100mb.bi
 download_benchmark 'Hetzner, Nuernberg, DE     ' 'http://hetzner.de/100MB.iso'
 download_benchmark 'iiNet, Perth, WA, AUS      ' 'http://ftp.iinet.net.au/test100MB.dat'
 download_benchmark 'Leaseweb, Haarlem, NL      ' 'http://mirror.nl.leaseweb.net/speedtest/100mb.bin'
-#download_benchmark 'Linode, Tokyo, JP          ' 'http://speedtest.tokyo.linode.com/100MB-tokyo.bin'
-#download_benchmark 'MammothVPS, Sydney, AUS    ' 'http://www.mammothvpscustomer.com/test100MB.dat'
-#download_benchmark 'Softlayer, Singapore       ' 'http://speedtest.sng01.softlayer.com/downloads/test100.zip'
+download_benchmark 'Linode, Tokyo, JP          ' 'http://speedtest.tokyo.linode.com/100MB-tokyo.bin'
+download_benchmark 'MammothVPS, Sydney, AUS    ' 'http://www.mammothvpscustomer.com/test100MB.dat'
+download_benchmark 'Softlayer, Singapore       ' 'http://speedtest.sng01.softlayer.com/downloads/test100.zip'
 
 echo "Downloading and running speedtest.net CLI"
 wget --quiet --no-check-certificate https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
